@@ -10,10 +10,10 @@ def change(event):
     alert("Hello !")
 
 configuracoes = {
-    "identar": True, #@param {type:"boolean"}
-    "espacos_identacao": 4, #@param {type:"integer"}
-    "ordenar": False, #@param {type:"boolean"}
-    "somente_ascii": False, #@param {type:"boolean"}
+    "identar": document["identar-checkbox"].checked, #@param {type:"boolean"}
+    "espacos_identacao": int(document["espacos-input"].value), #@param {type:"integer"}
+    "ordenar": document["ordenar-checkbox"].checked, #@param {type:"boolean"}
+    "somente_ascii": document["somente-ascii-checkbox"].checked, #@param {type:"boolean"}
     "dicionario": "{'result': {'country': {'long_name': 'Brasil', 'short_name': 'BR'}, 'state': {'long_name': 'São Paulo', 'short_name': 'SP'}, 'city': {'long_name': 'Ribeirão Preto', 'short_name': 'Ribeirão Preto'}, 'district': None, 'neighborhood': {'long_name': 'Distrito de Bonfim Paulista', 'short_name': 'Distrito de Bonfim Paulista'}, 'street': {'long_name': '9', 'short_name': '9'}, 'slug': '9-distrito-de-bonfim-paulista-ribeirao-preto-sp-brasil', 'geometry': {'location': {'lat': -21.2345726, 'lng': -47.8181069}, 'viewport': {'northeast': {'lat': -21.2332236197085, 'lng': -47.81675791970851}, 'southwest': {'lat': -21.23592158029151, 'lng': -47.81945588029151}}}}}", #@param {type:"string"}
 }
 document['dict-textarea'].text = configuracoes["dicionario"]
