@@ -18,9 +18,8 @@ configuracoes = {
 }
 document['dict-textarea'].text = configuracoes["dicionario"]
 
-def transformar_dict_em_json(configuracoes):
-    configuracoes["dicionario"] = document['dict-textarea'].text
-    configuracoes["dicionario"] = eval(configuracoes["dicionario"])
+def transformar_dict_em_json(event):
+    configuracoes["dicionario"] = eval(document['dict-textarea'].value)
     if configuracoes["identar"]:
         app_json = json.dumps(
             configuracoes["dicionario"],
@@ -35,7 +34,7 @@ def transformar_dict_em_json(configuracoes):
     document['json-textarea'].text = app_json
 
 transformar_dict_em_json(configuracoes)
-document["counter-button"].bind("click", transformar_dict_em_json(configuracoes))
+document["converter-button"].bind("click", transformar_dict_em_json)
 
 # title = 'Python'
 # document['header'].html = f"Hello, {title}!"
@@ -47,7 +46,7 @@ document["counter-button"].bind("click", transformar_dict_em_json(configuracoes)
 #     counter += 1
 #     document['counter'].html = str(counter)
 
-# document["counter-button"].bind("click", increment)
+# document["converter-button"].bind("click", increment)
 
 # # check console
 # current_time = int(time.strftime('%H'))
