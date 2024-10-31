@@ -1,0 +1,32 @@
+{
+  "title": "Python Starter",
+  "description": "",
+  "head": "<meta charset=\"UTF-8\" />\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />",
+  "htmlAttrs": "lang=\"en\" class=\"\"",
+  "tags": [],
+  "activeEditor": "script",
+  "markup": {
+    "language": "html",
+    "content": "<div class=\"container\">\n  <h1 id=\"header\">Hello, World!</h1><spam id=\"cumprimento\"></spam>\n  <img\n    class=\"logo\"\n    alt=\"logo\"\n    src=\"https://livecodes.io/livecodes/assets/templates/python.svg\"\n  />\n  <p>You clicked <span id=\"counter\">0</span> times.</p>\n  <button id=\"counter-button\">Click me</button>\n</div>\n"
+  },
+  "style": {
+    "language": "css",
+    "content": ".container,\n.container button {\n  text-align: center;\n  font: 1em sans-serif;\n}\n.logo {\n  width: 150px;\n}\n"
+  },
+  "script": {
+    "language": "python",
+    "content": "from browser import document\nimport time\n\ntitle = 'Python'\ndocument['header'].html = f\"Hello, {title}!\"\n\ncounter = 0\n\ndef increment(ev):\n    global counter\n    counter += 1\n    document['counter'].html = str(counter)\n\ndocument[\"counter-button\"].bind(\"click\", increment)\n\n# check console\ncurrent_time = int(time.strftime('%H'))\nif current_time < 12 :\n      print('Good morning')\n      document['cumprimento'].html = 'Good morning'\nelif 12 <= current_time < 18:\n      print('Good afternoon')\n      document['cumprimento'].html = 'Good afternoon'\nelse:\n      print('Good evening')\n      document['cumprimento'].html = 'Good evening'\n"
+  },
+  "stylesheets": [],
+  "scripts": [],
+  "cssPreset": "",
+  "processors": [],
+  "customSettings": {},
+  "imports": {},
+  "types": {},
+  "tests": {
+    "language": "typescript",
+    "content": ""
+  },
+  "version": "35"
+}
