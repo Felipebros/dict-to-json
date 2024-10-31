@@ -1,13 +1,15 @@
 {
-  "title": "Python Starter",
+  "title": "Dict to Json",
   "description": "",
   "head": "<meta charset=\"UTF-8\" />\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />",
-  "htmlAttrs": "lang=\"en\" class=\"\"",
-  "tags": [],
+  "htmlAttrs": "lang=\"pt-BR\" class=\"\"",
+  "tags": [
+    ""
+  ],
   "activeEditor": "markup",
   "markup": {
     "language": "html",
-    "content": "<!DOCTYPE html>\n<html lang=\"pt-BR\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Document</title>\n</head>\n<body> \n\n<div class=\"container\">\n  <h1 id=\"header\">Hello, World!</h1><spam id=\"cumprimento\"></spam>\n  <img\n    class=\"logo\"\n    alt=\"logo\"\n    src=\"https://livecodes.io/livecodes/assets/templates/python.svg\"\n  />\n  <p>You clicked <span id=\"counter\">0</span> times.</p>\n  <button id=\"counter-button\">Click me</button>\n</div>\n\n</body>\n</html>"
+    "content": "<div class=\"container\">\n  <h1 id=\"header\">Hello, World!</h1><spam id=\"cumprimento\"></spam>\n  <img\n    class=\"logo\"\n    alt=\"logo\"\n    src=\"https://livecodes.io/livecodes/assets/templates/python.svg\"\n  />\n  <p>You clicked <span id=\"counter\">0</span> times.</p>\n  <button id=\"counter-button\">Click me</button>\n</div>\n"
   },
   "style": {
     "language": "css",
